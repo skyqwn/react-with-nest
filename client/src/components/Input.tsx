@@ -7,8 +7,6 @@ import FormError from "./FormError";
 export const Input = ({
   name,
   label,
-  required,
-  errors,
   control,
   small,
   type = "text",
@@ -55,39 +53,3 @@ export const Input = ({
     </div>
   );
 };
-
-// import {
-//   useFormContext,
-//   useController,
-//   FieldPath,
-//   FieldValues,
-//   UseControllerProps,
-// } from "react-hook-form";
-
-// interface InputProps<
-//   TFieldValues extends FieldValues = FieldValues,
-//   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-// > extends UseControllerProps<TFieldValues, TName> {
-//   type?: string;
-//   placeholder?: string;
-// }
-
-// function Input<
-//   TFieldValues extends FieldValues = FieldValues,
-//   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-// >(props: InputProps<TFieldValues, TName>) {
-//   const name = props.name;
-//   const { field, fieldState } = useController({
-//     name,
-//     rules: props.rules,
-//   });
-
-//   return (
-//     <>
-//       <Input {...field} type={props.type} placeholder={props.placeholder} />
-//       {fieldState.error && fieldState.error.message}
-//     </>
-//   );
-// }
-
-// export default Input;

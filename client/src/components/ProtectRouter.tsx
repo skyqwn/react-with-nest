@@ -5,9 +5,7 @@ import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 const ProtectRouter = ({ children }: React.PropsWithChildren) => {
   const { pathname: from } = useLocation();
-  console.log(from);
   const isLoggedIn = isLoggedInVar();
-  console.log(isLoggedIn);
   if (!isLoggedIn) {
     return <Navigate to={"/auth"} state={{ from }} />;
   }

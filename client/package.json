@@ -14,13 +14,18 @@
     "graphql": "^16.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.50.1",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
+    "rimraf": "^5.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run codegen & react-scripts start",
+    "codegen": "rimraf src/__generated__ && graphql-codegen",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,9 +50,15 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.2.2",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@parcel/watcher": "^2.4.0",
+    "@types/react-helmet": "^6.1.11",
+    "@types/react-helmet-async": "^1.0.3",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }

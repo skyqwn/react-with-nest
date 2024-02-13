@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IFormErrorProps {
-  errorMessage: any;
+  errorMessage: string | undefined;
 }
 
 const FormError: React.FC<IFormErrorProps> = ({ errorMessage }) => {

@@ -38,10 +38,10 @@ export class User extends CoreEntity {
   @IsString()
   password: string;
 
-  @Column({ type: 'enum', enum: UserRole })
-  @Field((type) => UserRole)
-  @IsEnum(UserRole)
-  role: UserRole;
+  // @Column({ type: 'enum', enum: UserRole })
+  // @Field((type) => UserRole)
+  // @IsEnum(UserRole)
+  // role: UserRole;
 
   @BeforeInsert()
   async hashPassword(): Promise<void> {

@@ -3,7 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import ProtectRouter from "./components/ProtectRouter";
 import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
-import Auth from "./routes/Auth";
+import Auth from "./routes/Signup";
+import Signup from "./routes/Signup";
+import Login from "./routes/Login";
 
 const Router = () => {
   return (
@@ -16,7 +18,8 @@ const Router = () => {
           </ProtectRouter>
         }
       />
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
